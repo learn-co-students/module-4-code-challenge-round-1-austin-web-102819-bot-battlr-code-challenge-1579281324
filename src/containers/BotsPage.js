@@ -20,11 +20,10 @@ class BotsPage extends React.Component {
     })
   }
 
-  removeBotFromArmy = (bot) => {
-    // this.setState(previousState => {
-    //   botArmy: (previousState.botArmy)
-    // })
-    console.log(`Removed ${bot.name}`)
+  removeBotFromArmy = (robot) => {
+    this.setState({
+      botArmy: this.state.botArmy.filter(bot => bot.id != robot.id)
+    })
   }
   
 
